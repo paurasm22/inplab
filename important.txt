@@ -1,0 +1,13 @@
+To make react project work its important to install node modules so : 
+1.Open terminal 
+2. Go to the project's folder (cd <projectname>)  
+3. Hit npm install or npm i 
+4.Then npm run dev 
+
+
+
+To run express related projects its important to insall express
+1.Open terminal
+2. Go to the project's folder (cd <projectname>)  
+3. Hit npm i express
+4.Then hit node index.js 
