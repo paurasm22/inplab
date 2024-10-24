@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Circular Animation</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #779791;
+      }
+
+      button {
+        padding: 10px 20px;
+        font-size: 20px;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        background-color: #84c2a3;
+        color: white;
+        margin-bottom: 20px;
+      }
+
+      #container {
+        width: 200px;
+        height: 200px;
+        position: relative;
+        background: linear-gradient(0deg, #399aa7, #33a864);
+        border: 3px solid #f5e2e2;
+      }
+
+      #box {
+        width: 40px;
+        height: 40px;
+        background-color: #dce2dc;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      /* Keyframes for the circular motion */
+      @keyframes circularMotion {
+        0% {
+          transform: translate(-50%, -50%) rotate(0deg) translateX(70px)
+            rotate(0deg);
+        }
+        100% {
+          transform: translate(-50%, -50%) rotate(360deg) translateX(70px)
+            rotate(-360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="startAnimation()">Start Animation</button>
+    <div id="container">
+      <div id="box"></div>
+    </div>
+
+    <script>
+      function startAnimation() {
+        const box = document.getElementById("box");
+        // Apply the circular motion animation
+        box.style.animation = "circularMotion 4s linear infinite";
+      }
+    </script>
+  </body>
+</html>

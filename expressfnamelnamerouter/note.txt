@@ -1,0 +1,2 @@
+Go to this url to show output 
+http://localhost:3000/names/fullname/john/doe

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pauras</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+.header{
+height: 60px;
+background-color: aquamarine;
+}
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+.heading{
+padding-top: 10px;
+}
+.content{
+background-color: coral;
+height: 100vh;
+display: flex;
+/* align-items: center; */
+justify-content: center;
+label{
+height: 20px;
+font-size: 25px;
+}
+input{
+height: 30px;
+padding-left: 5px;
+font-size: 20px;
+}
+button{
+  height: 30px;
+  color:white;
+  background-color: blueviolet;
+  cursor: pointer;
+  font-weight: 600;
+  width: 30%;
+  }
+  button:hover {
+  background-color: aliceblue;
+  color: black;
+  }
+  }
+  .form1{
+  margin-left: 40px;
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  select{
+  margin-top: 10px;
+  height: 30px;
+  }
+  }
+  .name,.gender{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  }
+  .rollno,.addr{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  }
+  .dept{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  }
+  .year{
+    display: flex;
+flex-direction: column;
+gap: 20px;
+}
+.form1{
+width: 50%;
+}
+</style>
+</head>
+<body>
+<div class="header">
+<center> <h1 class="heading">Student's Registration form using HTML and CSS
+</h1></center>
+</div>
+<div class="content">
+<form action="" class="form1">
+<div class="name">
+<label for="name">Enter Name</label>
+<input type="text" name="" id="name">
+</div>
+<div class="rollno">
+<label for="roll">Enter Roll Number</label>
+<input type="text">
+</div>
+<div class="gender">
+<label for="">Select Gender</label>
+<select name="" id="">
+<option value="">Male</option>
+<option value="">Female</option>
+<option value="">Other </option>
+</select>
+</div>
+<div class="dept">
+<label for="">Enter Department</label>
+<select name="" id="">
+<option value="">Computer Science</option>
+<option value="">Information Technology</option>
+<option value="">AI DS</option>
+<option value="">AI ML</option>
+</select>
+</div>
+<div class="year">
+  <label for="">Enter year of study</label>
+  <select name="" id="">
+  <option value="">First</option>
+  <option value="">Second</option>
+  <option value="">Third</option>
+  <option value="">Fourth</option>
+  </select>
+  </div>
+  <div class="addr">
+  <label for="roll">Enter Addess</label>
+  <input type="text">
+  </div>
+  <center>
+  <button>Submit</button>
+  </center>
+  </div>
+  </form>
+  </body>
+  </html>

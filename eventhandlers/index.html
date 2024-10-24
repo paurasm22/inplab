@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background-color: #f4f4f4;
+      }
+      .name,
+      .second,
+      .third {
+        margin-bottom: 30px;
+        padding: 20px;
+        border-radius: 8px;
+        background-color: white;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      .box1,
+      .box2 {
+        height: 100px;
+        width: 100px;
+        background-color: white;
+        border: 2px solid black;
+        margin: 0 auto;
+      }
+      button {
+        margin-top: 10px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        border: none;
+      }
+      input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="name">
+      <div class="box1" id="box1"></div>
+      <button id="greenButton">Green</button>
+      <button id="redButton">Red</button>
+    </div>
+    <div class="second">
+      <div class="box2" id="box2"></div>
+      <label for="">This shows on hover effect</label>
+    </div>
+    <div class="third">
+      <input type="text" id="textInput" placeholder="Type something here" />
+      <p id="info">Event information will appear here.</p>
+      <p id="info2">Event information will appear here.</p>
+    </div>
+    <script>
+      const handleGreen = () => {
+        const element = document.getElementById("box1");
+        if (element) {
+          element.style.backgroundColor = "green";
+        }
+      };
+
+      const handleRed = () => {
+        const element = document.getElementById("box1");
+        if (element) {
+          element.style.backgroundColor = "red";
+        }
+      };
+
+      document
+        .getElementById("greenButton")
+        .addEventListener("click", handleGreen);
+      document.getElementById("redButton").addEventListener("click", handleRed);
+
+      document.getElementById("box2").addEventListener("mouseover", () => {
+        document.getElementById("info").innerText = "Mouse is over box2.";
+      });
+
+      document.getElementById("box2").addEventListener("mouseout", () => {
+        document.getElementById("info").innerText = "Mouse is out of box2.";
+      });
+
+      document
+        .getElementById("textInput")
+        .addEventListener("keydown", (event) => {
+          document.getElementById(
+            "info"
+          ).innerText = `Key pressed down: ${event.key} (Code: ${event.code})`;
+        });
+
+      document
+        .getElementById("textInput")
+        .addEventListener("keyup", (event) => {
+          document.getElementById(
+            "info"
+          ).innerText = `Key released: ${event.key}`;
+        });
+
+      document
+        .getElementById("textInput")
+        .addEventListener("input", (event) => {
+          document.getElementById(
+            "info2"
+          ).innerText = `Current input: ${event.target.value}`;
+        });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,66 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+}
+
+.calculator {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.display {
+  background: #e9e9e9;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  height: 80px; /* Adjust height for better visibility */
+}
+
+.input {
+  font-size: 24px;
+  text-align: right;
+  height: 40px;
+}
+
+.result {
+  font-size: 20px;
+  color: #333;
+  text-align: right;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+button {
+  padding: 20px;
+  font-size: 18px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #3498db;
+  color: white;
+  transition: background-color 0.3s;
+  min-width: 70px; /* Ensures all buttons are rectangular */
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+button:active {
+  background-color: #1c598a; /* Darker shade on button press */
+}
